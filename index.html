@@ -7,6 +7,7 @@
 <title>AS STORE</title>
 
 <style>
+
 *{
   box-sizing:border-box;
 }
@@ -18,11 +19,21 @@ body{
   color:white;
 }
 
+/* HEADER */
+
 header{
   text-align:center;
-  padding:35px 15px;
+  padding:25px 15px;
   background:linear-gradient(135deg,#151515,#080808);
   border-bottom:1px solid #292929;
+}
+
+.store-logo{
+  width:100px;
+  height:100px;
+  object-fit:contain;
+  border-radius:50%;
+  margin-bottom:10px;
 }
 
 .logo{
@@ -36,6 +47,8 @@ header{
   color:#999;
   font-size:14px;
 }
+
+/* SEARCH */
 
 .search{
   display:block;
@@ -51,6 +64,8 @@ header{
   outline:none;
 }
 
+/* CONTAINER */
+
 .container{
   width:92%;
   max-width:700px;
@@ -61,6 +76,8 @@ header{
   font-size:25px;
   margin:25px 0 15px;
 }
+
+/* APP CARD */
 
 .app-card{
   background:#151515;
@@ -102,6 +119,8 @@ header{
   line-height:1.5;
 }
 
+/* DOWNLOAD BUTTON */
+
 .download{
   display:inline-block;
   text-decoration:none;
@@ -116,20 +135,41 @@ header{
   background:#ddd;
 }
 
+/* FOOTER */
+
 footer{
   text-align:center;
   color:#666;
   padding:40px 10px;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- AS STORE HEADER -->
+
 <header>
-  <div class="logo">AS STORE</div>
-  <div class="subtitle">Premium Gaming App Store</div>
+
+  <img
+    src="as-logo.png"
+    class="store-logo"
+    alt="AS STORE Logo"
+  >
+
+  <div class="logo">
+    AS STORE
+  </div>
+
+  <div class="subtitle">
+    Premium Gaming App Store
+  </div>
+
 </header>
+
+
+<!-- SEARCH -->
 
 <input
   class="search"
@@ -138,13 +178,17 @@ footer{
   placeholder="🔎 Search apps..."
 >
 
+
 <div class="container">
 
-  <h2 class="title">🎮 Featured Apps</h2>
+  <h2 class="title">
+    🎮 Featured Apps
+  </h2>
 
   <div id="appList"></div>
 
 </div>
+
 
 <footer>
   © 2026 AS STORE — All Rights Reserved
@@ -258,11 +302,15 @@ function showApps(list){
           >
 
           <div>
-            <div class="app-name">${app.name}</div>
+
+            <div class="app-name">
+              ${app.name}
+            </div>
 
             <div class="info">
               Version ${app.version} • ${app.size}
             </div>
+
           </div>
 
         </div>
@@ -289,7 +337,7 @@ function showApps(list){
 showApps(apps);
 
 
-/* Search */
+/* SEARCH */
 
 document.getElementById("search").addEventListener("input", function(){
 
@@ -306,4 +354,4 @@ document.getElementById("search").addEventListener("input", function(){
 </script>
 
 </body>
-    </html>
+  </html>
